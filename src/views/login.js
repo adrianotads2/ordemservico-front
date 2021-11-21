@@ -2,8 +2,19 @@ import React  from 'react';
 import Card from '../components/card';
 import FormGroup from '../components/form-group';
 import {withRouter} from 'react-router-dom';
+import { traverseTwoPhase } from 'react-dom/test-utils';
 
 class Login extends React.Component {
+
+	state = {
+		email: '',
+		senha: ''
+	}
+
+	acessar = () => {
+		console.log('Email: ', this.state.email)
+		console.log('Senha: ', this.state.senha)
+	}
 
 	preCadastro = () => {
 		this.props.history.push('/cadastro-servidor')
@@ -23,16 +34,21 @@ class Login extends React.Component {
 												  className="form-control" 
                                                   id="exampleInputEmail1" 
 												  aria-describedby="emailHelp" 
-												  placeholder="Enter email"/>
+												  placeholder="Enter email"
+												  value={this.state.email}
+												  onChange={e => this.setState({email: e.target.value}) }/>
                                     </FormGroup>
                                     <FormGroup label="Senha: *" htmlFor="inputSenha">
                                     <input type="password" className="form-control" 
 										   id="exampleInputPassword1" 
-										   placeholder="Password"/>
+										   placeholder="Password"
+										   value={this.state.senha}
+										   onChange={e => this.setState({senha: e.target.value}) }/>
                                     </FormGroup>
                                     <button type="button" 
                                             className="btn btn-primary"
-                                            style={{margin: '4px 4px 0 0'}}>Acessar</button>
+                                            style={{margin: '4px 4px 0 0'}}
+											onClick={this.acessar}>Acessar</button>
                                     <button type="button" 
                                             className="btn btn-info"
                                             style={{margin: '4px 4px 0 0'}}

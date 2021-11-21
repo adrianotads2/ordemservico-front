@@ -9,7 +9,7 @@ function Rotas(){
 
             <Switch>
                 <Route path="/home" component={Home} />
-                <Route path="/login" component={Login} />
+                <Route exact={true} path="/" component={Login} />
                 <Route path="/cadastro-servidor" component={CadastroServidor} />
             </Switch>
 

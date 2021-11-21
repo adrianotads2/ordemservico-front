@@ -21,7 +21,7 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto">
               <NavBarItem href="#/home" label="Home" />
-              <NavBarItem href="#/login" label="Login" />
+              <NavBarItem href="#/" label="Login" />
               <NavBarItem href="#/cadastro-servidor" label="Cadastro Servidor" />
             </ul>
           </div>
