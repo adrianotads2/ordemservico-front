@@ -1,12 +1,24 @@
 import React from 'react';
 
 class Home extends React.Component {
+
+	state = {
+		nomeServidor: ''
+	}
+
+	componentDidMount(){
+		const servidorStorage = localStorage.getItem('servidor_logado')
+		const servidorLogado = JSON.parse(servidorStorage)
+		this.setState({nomeServidor: servidorLogado.nome})
+	}
+
 	render() {
 		return (
 			<div className="jumbotron">
-				<h1 className="display-3">Bem vindo!</h1>
+				<h1 className="display-3">Bem vindo ! </h1>
 				<p className="lead">Sistema de gerenciamento de Ordem de Serviço.</p>
 				<hr className="my-4" />
+				<p>Olá {this.state.nomeServidor}, tudo bem?</p>
 				<p>E essa é sua área administrativa, utilize um dos menus ou botões abaixo para navegar pelo sistema.</p>
 				<p className="lead">
 					<a className="btn btn-primary btn-lg"
