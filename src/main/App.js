@@ -5,6 +5,8 @@ import Navbar from '../components/navbar';
 
 import 'bootswatch/dist/superhero/bootstrap.css';
 import '../custom.css';
+import 'toastr/build/toastr.css';
+import 'toastr/build/toastr.min.js';
 
 
 class App extends React.Component {
