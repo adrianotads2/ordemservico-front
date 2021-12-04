@@ -29,7 +29,7 @@ class CadastroServidor extends React.Component {
 		this.service.salvar(servidor)
 					.then(response => {
 						messageSuccess('Servidor cadastrado com sucesso! Login habilitado');
-						this.props.history.push('/login');
+						this.props.history.push('/');
 					}).catch(error => {
 						messageError(error.response.data.messsage)
 					})
