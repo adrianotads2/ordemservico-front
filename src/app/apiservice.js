@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const httpClient = axios.create({
-    baseURL: 'http://localhost:8080'
-   //baseURL: 'http://adr-ordemservico.herokuapp.com'
+    //baseURL: 'http://localhost:8080'
+   baseURL: 'http://adr-ordemservico.herokuapp.com'
 });
 
 class ApiService {
