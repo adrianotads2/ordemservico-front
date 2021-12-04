@@ -29,7 +29,8 @@ class Login extends React.Component {
 			this.props.history.push('/home')
 		}).catch(erro => {
 			//this.setState({erroLogin: erro.response.data})
-			messageError(erro.response.data)
+			//console.log(erro.response.data)
+			messageError(erro.response.data.message)
 		})
 	}
 

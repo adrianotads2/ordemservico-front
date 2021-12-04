@@ -9,6 +9,10 @@ class ServidorService extends ApiService {
     autenticar(credenciais){
         return this.post('/autenticar', credenciais);
     }
+
+    salvar(servidor){
+        return this.post('/',servidor);
+    }
 }
 
 export default ServidorService;
