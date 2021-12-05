@@ -11,7 +11,7 @@ class ServidorService extends ApiService {
     }
 
     salvar(servidor){
-        return this.post('/',servidor);
+        return this.post('/', servidor);
     }
 }
 

@@ -28,7 +28,7 @@ class Login extends React.Component {
 			localStorage.setItem('servidor_logado', JSON.stringify(response.data))
 			this.props.history.push('/home')
 		}).catch(erro => {
-			//this.setState({erroLogin: erro.response.dsata})
+			//this.setState({erroLogin: erro.response.data})
 			//console.log(erro.response.data)
 			messageError(erro.response.data.message)
 		})
